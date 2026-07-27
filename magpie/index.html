@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magpie 喜鹊 — 隐私政策 / Privacy Policy</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #05060c; color: #e9ebf2;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .glow { position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background: radial-gradient(60% 40% at 50% -5%, rgba(90,130,200,.28), transparent 70%); }
+  main { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 72px 24px 96px; }
+  .brand { font-family: Georgia, "Times New Roman", "Songti SC", serif; font-size: 40px; letter-spacing: .5px; margin: 0; }
+  .tag { font-family: Georgia, "Songti SC", serif; font-style: italic; color: #8b90a6; margin: 6px 0 0; }
+  h2 { font-family: Georgia, "Songti SC", serif; font-weight: 400; font-size: 22px; margin: 44px 0 10px; color: #fff; }
+  h3 { font-weight: 600; font-size: 16px; margin: 24px 0 6px; color: #e3e6f0; }
+  p, li { color: #c7ccdb; }
+  a { color: #a9c2ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lead { font-size: 18px; color: #e3e6f0; margin-top: 28px; }
+  .meta { color: #6b7088; font-size: 14px; margin-top: 8px; }
+  ul { padding-left: 22px; } li { margin: 6px 0; }
+  .rule { height: 1px; background: rgba(255,255,255,.08); border: 0; margin: 48px 0; }
+  footer { color: #6b7088; font-size: 14px; }
+  .badge { display: inline-block; margin-top: 18px; padding: 6px 14px; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.14); color: #cfd3e2; font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,.08); color: #c7ccdb; vertical-align: top; }
+  th { color: #e3e6f0; font-weight: 600; }
+  .en { color: #aab0c4; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<main>
+  <h1 class="brand">Magpie 喜鹊</h1>
+  <p class="tag">笔记只存在你的手机里 · Your notes never leave your phone</p>
+  <span class="badge">隐私政策 / Privacy Policy</span>
+  <p class="meta">最后更新 / Last updated: 2026-07-27</p>
+
+  <p class="lead">Magpie 不收集你的任何数据。它没有账号、没有服务器,也不含任何联网代码——你的笔记、图片、录音、手写和附件全部只存在这台设备上。下面把每一项都说清楚。</p>
+
+  <h2>一、我们收集什么</h2>
+  <p><strong>什么都不收集。</strong>Magpie 没有注册登录,没有广告,没有第三方统计或分析 SDK,不采集广告标识符(IDFA),不进行任何形式的跨 App 追踪。App 内不包含任何网络请求代码,因此也没有任何数据可以离开你的设备。</p>
+
+  <h2>二、你的内容存在哪里</h2>
+  <p>笔记正文使用 Apple 的本地存储(SwiftData)保存在 App 沙盒内;插入的图片、录音、手写笔迹和文件附件保存在 App 自己的文件目录中。删除 App 即一并删除。</p>
+  <table>
+    <tr><th>内容</th><th>存放位置</th><th>是否上传</th></tr>
+    <tr><td>笔记正文、颜色、标签、置顶与归档状态</td><td>设备本地数据库</td><td>否</td></tr>
+    <tr><td>图片、拍照、手写笔迹</td><td>App 沙盒文件目录</td><td>否</td></tr>
+    <tr><td>录音与转写文字</td><td>App 沙盒文件目录</td><td>否</td></tr>
+    <tr><td>文件附件</td><td>App 沙盒文件目录</td><td>否</td></tr>
+  </table>
+  <p>需要说明的是:如果你开启了 iPhone 的 iCloud 备份或用电脑做整机备份,系统会把 App 的数据一并备份——这是 Apple 的系统备份机制,由你自己控制,我们既看不到也接触不到备份内容。Magpie <strong>本身不提供任何跨设备同步</strong>。</p>
+
+  <h2>三、系统能力的使用</h2>
+  <h3>语音转文字</h3>
+  <p>把录音转成文字时,Magpie 使用 Apple 的语音识别框架,并<strong>强制要求设备端识别</strong>(<code>requiresOnDeviceRecognition = true</code>)。设备或所选语言不支持离线识别时,App 会直接提示失败,<strong>而不会把你的录音发往任何服务器</strong>。</p>
+  <h3>图片文字识别(OCR)</h3>
+  <p>为了让搜索能搜到图片里的文字,Magpie 使用 Apple 的 Vision 框架在设备本地识别图中文字,识别结果只写在本地。图片不会被上传。</p>
+  <h3>密码锁</h3>
+  <p>如果你启用了 4 位密码,我们只把「加盐后的哈希值」存进系统钥匙串(Keychain),<strong>不保存密码明文</strong>。为了安全,解锁页<strong>没有任何找回或重置入口</strong>——请务必记住你设的密码。</p>
+
+  <h2>四、权限说明</h2>
+  <ul>
+    <li><strong>麦克风</strong>——只在你主动录制语音笔记时使用;</li>
+    <li><strong>语音识别</strong>——只在你主动把录音转为文字时使用,且限定为设备端识别;</li>
+    <li><strong>相机</strong>——只在你主动选择「拍照」插入笔记时使用。</li>
+  </ul>
+  <p>从相册选图使用系统的照片选择器,因此 Magpie <strong>不申请、也无法访问</strong>你的相册权限——它只会拿到你亲手挑中的那几张图。</p>
+
+  <h2>五、儿童隐私</h2>
+  <p>本 App 不含广告、不含面向他人的用户生成内容、不收集任何可识别个人身份的信息,也不做任何定向内容。</p>
+
+  <h2>六、政策变更</h2>
+  <p>如本政策发生变化,我们会在本页面更新并修改日期。重大变化(例如新增任何数据收集)会在 App 更新说明中明确注明。</p>
+
+  <h2>七、联系我们</h2>
+  <p>任何隐私相关问题,请邮件联系 <a href="mailto:procmeans@proton.me">procmeans@proton.me</a>。</p>
+
+  <hr class="rule">
+
+  <h2 class="en">English Summary</h2>
+  <p class="en">Magpie collects <strong>no data whatsoever</strong>. There is no account, no server, and no networking code anywhere in the app. Your notes, images, audio recordings, handwriting, and file attachments are stored only in the app's sandbox on your device and are deleted when you delete the app.</p>
+  <h3 class="en">On-device only</h3>
+  <p class="en">Speech-to-text uses Apple's speech framework with <code>requiresOnDeviceRecognition = true</code> — if on-device recognition is unavailable for your device or language, the app reports a failure rather than sending your audio anywhere. Image text recognition (OCR) runs locally through Apple's Vision framework. The optional 4-digit passcode is stored only as a salted hash in the system Keychain; there is deliberately <strong>no recovery or reset path</strong>, so please remember it.</p>
+  <h3 class="en">Backups &amp; sync</h3>
+  <p class="en">Magpie provides no cross-device sync of its own. If you use iCloud Backup or a computer backup, the system includes app data in that backup — that is Apple's mechanism, under your control, and we can neither see nor access it.</p>
+  <h3 class="en">Permissions</h3>
+  <p class="en">Microphone (only while recording a voice note), Speech Recognition (only when you convert a recording to text, on-device only), and Camera (only when you choose "Take Photo"). Picking images uses the system photo picker, so the app never requests or receives photo library access — it only ever sees the images you hand it.</p>
+  <p class="en">No ads, no tracking, no IDFA, no third-party SDKs. Questions? Email <a href="mailto:procmeans@proton.me">procmeans@proton.me</a>.</p>
+
+  <footer>© 2026 procmeans · Magpie 喜鹊</footer>
+</main>
+</body>
+</html>
