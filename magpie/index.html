@@ -33,6 +33,7 @@
   th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,.08); color: #c7ccdb; vertical-align: top; }
   th { color: #e3e6f0; font-weight: 600; }
   .en { color: #aab0c4; }
+  .note { border-left: 2px solid rgba(169,194,255,.45); padding: 2px 0 2px 14px; margin: 16px 0; color: #b9c0d4; }
 </style>
 </head>
 <body>
@@ -41,12 +42,30 @@
   <h1 class="brand">Magpie 喜鹊</h1>
   <p class="tag">笔记只存在你的手机里 · Your notes never leave your phone</p>
   <span class="badge">隐私政策 / Privacy Policy</span>
-  <p class="meta">最后更新 / Last updated: 2026-07-27</p>
+  <p class="meta">最后更新 / Last updated: 2026-07-29</p>
 
-  <p class="lead">Magpie 不收集你的任何数据。它没有账号、没有服务器,也不含任何联网代码——你的笔记、图片、录音、手写和附件全部只存在这台设备上。下面把每一项都说清楚。</p>
+  <p class="lead">你写下的东西——笔记、图片、录音、手写和附件——<strong>永远只存在这台设备上</strong>,我们看不到,也没有服务器可以拿到它们。除此之外,App 会上报一小份匿名的使用与崩溃统计,用来知道有多少人在用、以及哪里崩了。下面把每一项都说清楚。</p>
 
   <h2>一、我们收集什么</h2>
-  <p><strong>什么都不收集。</strong>Magpie 没有注册登录,没有广告,没有第三方统计或分析 SDK,不采集广告标识符(IDFA),不进行任何形式的跨 App 追踪。App 内不包含任何网络请求代码,因此也没有任何数据可以离开你的设备。</p>
+
+  <h3>你的笔记内容:一个字都不收集</h3>
+  <p>笔记正文、图片、录音、转写文字、手写笔迹、文件附件、标签、密码——<strong>这些统统不会离开你的设备</strong>,不会出现在任何上报里。我们没有账号系统,也没有存放用户内容的服务器。</p>
+
+  <h3>匿名使用与稳定性统计:会收集</h3>
+  <p>自 1.1 版起,Magpie 集成了<strong>友盟+(Umeng+,上海友盟信息科技有限公司)</strong>的统计与性能监控 SDK,用于了解产品被使用的整体情况和定位崩溃。它采集的是设备与运行状况层面的信息,<strong>不涉及你的笔记内容</strong>:</p>
+  <table>
+    <tr><th>类别</th><th>具体内容</th><th>用途</th></tr>
+    <tr><td>设备与系统信息</td><td>设备型号、操作系统版本、屏幕分辨率、系统语言与时区、网络类型(Wi‑Fi/蜂窝)、运营商</td><td>统计设备分布,复现崩溃环境</td></tr>
+    <tr><td>匿名设备标识</td><td>IDFV(供应商标识)及友盟生成的匿名标识(UMID / ZID)</td><td>区分独立设备,统计日活与留存</td></tr>
+    <tr><td>应用信息</td><td>App 版本号、构建号、分发渠道</td><td>按版本统计与排查</td></tr>
+    <tr><td>使用数据</td><td>启动次数、启动耗时、使用时长、会话记录</td><td>了解使用频次与性能</td></tr>
+    <tr><td>崩溃与性能数据</td><td>崩溃堆栈、卡顿记录、内存异常(OOM)信息</td><td>定位并修复缺陷</td></tr>
+    <tr><td>粗略位置</td><td>由服务端依据访问 IP 推断的<strong>城市级</strong>地区,精度仅到城市</td><td>统计用户地区分布</td></tr>
+  </table>
+
+  <p class="note"><strong>我们不做这些:</strong>不采集广告标识符(IDFA),不申请 App 跟踪透明度(ATT)授权,不进行跨 App 或跨网站追踪,不做广告归因。代码中已显式关闭友盟的 Apple Search Ads 归因与 SKAdNetwork 转化回传(<code>setASAEnabled(false)</code> / <code>setSKANEnabled(false)</code>)。Magpie 内没有任何广告。</p>
+
+  <p>友盟+ 对上述数据的处理适用其自身的隐私政策,可在 <a href="https://www.umeng.com/page/policy" rel="noopener">umeng.com/page/policy</a> 查阅。除友盟+ 外,Magpie 不含任何其他第三方 SDK,也不向任何其他第三方共享数据。</p>
 
   <h2>二、你的内容存在哪里</h2>
   <p>笔记正文使用 Apple 的本地存储(SwiftData)保存在 App 沙盒内;插入的图片、录音、手写笔迹和文件附件保存在 App 自己的文件目录中。删除 App 即一并删除。</p>
@@ -75,26 +94,32 @@
   </ul>
   <p>从相册选图使用系统的照片选择器,因此 Magpie <strong>不申请、也无法访问</strong>你的相册权限——它只会拿到你亲手挑中的那几张图。</p>
 
-  <h2>五、儿童隐私</h2>
-  <p>本 App 不含广告、不含面向他人的用户生成内容、不收集任何可识别个人身份的信息,也不做任何定向内容。</p>
+  <h2>五、数据保留与你的权利</h2>
+  <p>笔记内容存在你自己的设备上,删除笔记或删除 App 即彻底消失,不经过我们。匿名统计数据由友盟+ 按其政策保留。如果你希望我们协助处理与你设备相关的统计数据(查询或删除),请邮件联系我们并说明情况——由于这些数据不含账号也不与你的真实身份关联,我们可能需要你提供设备标识才能定位。</p>
 
-  <h2>六、政策变更</h2>
-  <p>如本政策发生变化,我们会在本页面更新并修改日期。重大变化(例如新增任何数据收集)会在 App 更新说明中明确注明。</p>
+  <h2>六、儿童隐私</h2>
+  <p>本 App 不含广告、不含面向他人的用户生成内容、不收集可识别个人身份的信息,也不做任何定向内容。上述匿名统计不用于识别个人。</p>
 
-  <h2>七、联系我们</h2>
+  <h2>七、政策变更</h2>
+  <p>如本政策发生变化,我们会在本页面更新并修改日期。重大变化(例如新增任何数据收集)会在 App 更新说明中明确注明。<strong>本次更新(2026-07-29)即属于此类:1.1 版新增了匿名使用与崩溃统计。</strong></p>
+
+  <h2>八、联系我们</h2>
   <p>任何隐私相关问题,请邮件联系 <a href="mailto:procmeans@proton.me">procmeans@proton.me</a>。</p>
 
   <hr class="rule">
 
   <h2 class="en">English Summary</h2>
-  <p class="en">Magpie collects <strong>no data whatsoever</strong>. There is no account, no server, and no networking code anywhere in the app. Your notes, images, audio recordings, handwriting, and file attachments are stored only in the app's sandbox on your device and are deleted when you delete the app.</p>
+  <p class="en"><strong>Your content never leaves your device.</strong> Notes, images, audio recordings, handwriting, and file attachments are stored only in the app's sandbox and are deleted when you delete the app. There is no account and no server that holds your content.</p>
+  <h3 class="en">Anonymous analytics</h3>
+  <p class="en">Since version 1.1, Magpie includes the <strong>Umeng+ (Alibaba)</strong> analytics and performance-monitoring SDK. It collects device model, OS version, screen resolution, language and time zone, network type and carrier, the IDFV plus Umeng's own anonymous identifiers, app version and channel, launch counts and duration, session data, crash stacks, UI hangs and out-of-memory reports, and a city-level region inferred from your IP. <strong>It never receives any of your note content.</strong> Umeng's own policy applies to this data: <a href="https://www.umeng.com/page/policy" rel="noopener">umeng.com/page/policy</a>.</p>
+  <p class="en"><strong>No IDFA, no ATT prompt, no cross-app or cross-site tracking, no ad attribution, no ads.</strong> Apple Search Ads attribution and SKAdNetwork reporting are explicitly disabled in code. Umeng is the only third-party SDK in the app.</p>
   <h3 class="en">On-device only</h3>
   <p class="en">Speech-to-text uses Apple's speech framework with <code>requiresOnDeviceRecognition = true</code> — if on-device recognition is unavailable for your device or language, the app reports a failure rather than sending your audio anywhere. Image text recognition (OCR) runs locally through Apple's Vision framework. The optional 4-digit passcode is stored only as a salted hash in the system Keychain; there is deliberately <strong>no recovery or reset path</strong>, so please remember it.</p>
   <h3 class="en">Backups &amp; sync</h3>
   <p class="en">Magpie provides no cross-device sync of its own. If you use iCloud Backup or a computer backup, the system includes app data in that backup — that is Apple's mechanism, under your control, and we can neither see nor access it.</p>
   <h3 class="en">Permissions</h3>
   <p class="en">Microphone (only while recording a voice note), Speech Recognition (only when you convert a recording to text, on-device only), and Camera (only when you choose "Take Photo"). Picking images uses the system photo picker, so the app never requests or receives photo library access — it only ever sees the images you hand it.</p>
-  <p class="en">No ads, no tracking, no IDFA, no third-party SDKs. Questions? Email <a href="mailto:procmeans@proton.me">procmeans@proton.me</a>.</p>
+  <p class="en">Questions? Email <a href="mailto:procmeans@proton.me">procmeans@proton.me</a>.</p>
 
   <footer>© 2026 procmeans · Magpie 喜鹊</footer>
 </main>
