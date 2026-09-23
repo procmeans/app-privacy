@@ -41,12 +41,20 @@
   <h1 class="brand">南韩词典</h1>
   <p class="tag">会陪你的韩语词典 · A Korean dictionary that keeps you company</p>
   <span class="badge">隐私政策 / Privacy Policy</span>
-  <p class="meta">最后更新 / Last updated: 2026-07-23</p>
+  <p class="meta">最后更新 / Last updated: 2026-09-23</p>
 
   <p class="lead">南韩词典的核心功能完全离线:词库内置在 App 内,你的查词记录、收藏和学习进度只保存在你自己的设备上,我们无法看到。为了统计使用情况和及时发现崩溃问题,App 集成了友盟+统计分析 SDK,下文如实说明它收集什么。</p>
 
   <h2>一、我们自己收集什么</h2>
-  <p>什么都不收集。南韩词典没有账号系统、不需要注册登录、没有广告、没有服务器。词典查询在本地词库中完成,不联网;你的收藏、查词历史和学习统计使用 Apple 的本地存储(SwiftData)保存在设备上,卸载 App 即被删除。</p>
+  <p>日常使用时什么都不收集。南韩词典没有账号系统、不需要注册登录、没有广告。词典查询在本地词库中完成,不联网;你的收藏、查词历史、笔记和学习统计使用 Apple 的本地存储(SwiftData)保存在设备上,卸载 App 即被删除。</p>
+  <h3>唯一的例外:你主动提交的「反馈与建议」</h3>
+  <p>只有当你在「设置 → 反馈与建议」里填写并点击提交时,App 才会发送以下内容:</p>
+  <ul>
+    <li>你写的反馈文字;</li>
+    <li>你选填的联系方式(邮箱或微信号,不填则不发送);</li>
+    <li>App 版本号、iOS 系统版本和设备型号(用于定位问题)。</li>
+  </ul>
+  <p>这些内容经 Cloudflare Workers 中转,保存为开发者私有 GitHub 仓库中的一条记录,仅开发者本人可见,只用于回复你和改进 App,不做其他用途,不出售或分享给任何人。如需删除你提交过的反馈,请邮件联系下方地址。</p>
 
   <h2>二、第三方 SDK:友盟+(Umeng)</h2>
   <p>App 集成了友盟同欣(北京)科技有限公司的「友盟+」统计分析与性能监控 SDK(UMCommon / UMDevice / UMAPM / UTDID),用于了解 App 的整体使用情况(如日活、启动次数)和收集崩溃日志以便修复问题。它会收集:</p>
@@ -63,7 +71,7 @@
   </ul>
 
   <h2>三、儿童隐私</h2>
-  <p>本 App 不含广告与用户生成内容,不收集可识别个人身份的信息,不面向儿童做任何定向内容。</p>
+  <p>本 App 不含广告与公开的用户生成内容,除你在反馈中主动选填的联系方式外,不收集可识别个人身份的信息,不面向儿童做任何定向内容。</p>
 
   <h2>四、政策变更</h2>
   <p>如本政策发生变化,我们会在本页面更新并修改日期。重大变化(例如新增数据收集)会在 App 更新说明中注明。</p>
@@ -74,7 +82,9 @@
   <hr class="rule">
 
   <h2 class="en">English Summary</h2>
-  <p class="en">南韩词典 (Korean Dictionary) works fully offline for its core features: the dictionary is bundled inside the app, and your lookups, favorites, and learning progress are stored only on your device using Apple's local storage. We run no servers and have no accounts.</p>
+  <p class="en">南韩词典 (Korean Dictionary) works fully offline for its core features: the dictionary is bundled inside the app, and your lookups, favorites, and learning progress are stored only on your device using Apple's local storage. We have no accounts.</p>
+  <h3 class="en">Feedback you choose to send</h3>
+  <p class="en">Only when you submit the in-app "Feedback" form does the app send your message, an optional contact (email or WeChat ID, only if you enter one), and the app version, iOS version and device model. It is relayed through Cloudflare Workers and stored in the developer's private GitHub repository, used only to reply to you and improve the app, and never sold or shared. Email us to have your feedback deleted.</p>
   <h3 class="en">Third-party SDK: Umeng+ Analytics &amp; APM</h3>
   <p class="en">The app integrates the Umeng+ SDK (a widely used analytics service operated by Umeng Tongxin (Beijing) Technology Co., Ltd.) to measure aggregate usage and collect crash reports. It collects: a device identifier (IDFV, not IDFA), device model, OS version, language/region, network type, app launch and session data, and crash/performance logs. This data is <strong>not linked to your identity</strong> and is <strong>not used for tracking or advertising</strong> — the app does not access the advertising identifier (IDFA) and performs no cross-app tracking. See the <a href="https://www.umeng.com/page/policy" rel="noopener">Umeng privacy policy</a> for details.</p>
   <p class="en">Questions? Email <a href="mailto:procmeans@proton.me">procmeans@proton.me</a>.</p>
