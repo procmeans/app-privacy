@@ -78,7 +78,7 @@
   <p class="note"><strong>What we do not do:</strong> our own analytics and crash reports never use your advertising ID (IDFA / GAID), and the Game requests no device permissions such as camera, microphone, contacts, photos, or location. Advertising data, and Apple's tracking permission on iOS, are described in section 4.</p>
 
   <h2>4. Advertising and purchases</h2>
-  <p>The Game shows a banner ad on the home screen, full-screen ads between levels, and optional rewarded video ads (for example "+5 drops"). Ads are served through <strong>Unity LevelPlay</strong> (Unity Technologies) and the ad networks it works with, currently <strong>Unity Ads</strong>, <strong>Google AdMob</strong>, and <strong>Meta Audience Network</strong>. To choose, show, cap, and measure ads, and to prevent ad fraud, these companies collect data from your device directly:</p>
+  <p>The Game shows a banner ad on the home screen, full-screen ads between levels, and optional rewarded video ads (for example "+5 drops"). Ads are served through <strong>Unity LevelPlay</strong> (Unity Technologies) and the ad networks it works with, currently <strong>Unity Ads</strong>, <strong>Google AdMob</strong>, and <strong></strong>. To choose, show, cap, and measure ads, and to prevent ad fraud, these companies collect data from your device directly:</p>
   <div class="table-wrap"><table>
     <tr><th>Category</th><th>What is collected</th></tr>
     <tr><td>Device identifiers</td><td>On Android, the Google advertising ID (GAID). On iOS, the identifier for vendor (IDFV), and the advertising ID (IDFA) only if you allow tracking (see below).</td></tr>
@@ -89,7 +89,6 @@
   <ul>
     <li>Unity (LevelPlay, Unity Ads): <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">unity.com/legal/game-player-and-app-user-privacy-policy</a></li>
     <li>Google AdMob: <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a></li>
-    <li>Meta Audience Network: <a href="https://www.facebook.com/privacy/policy/" rel="noopener">facebook.com/privacy/policy</a></li>
   </ul>
   <p>The Game offers an optional one-time purchase, "Remove Ads". Payment is handled entirely by the Apple App Store or Google Play under their own terms and privacy policies. <strong>We never receive your payment details, name, or email.</strong> The Game only receives a confirmation of which item was purchased, used to unlock it and to restore it through "Restore Purchases", and it records an anonymous "purchase" event in the analytics described in section 2.</p>
 
@@ -125,7 +124,7 @@
   <p class="zh">《Cryptid Drop》由 <strong>RAINWE GAMES</strong> 开发，没有账号、登录和聊天功能，不索取姓名、邮箱、通讯录、照片或位置。游戏进度和设置只保存在你的设备上，卸载即删除。</p>
   <p class="zh"><strong>匿名游玩统计（PostHog，美国）：</strong>首次启动时随机生成的安装 ID（不是广告标识符）、关卡开始/通关/失败/退出、分数、使用次数、道具、游玩时长、游戏版本与系统平台，以及随网络请求到达的 IP 地址（可能被用于推断大致地区）。用于调整关卡难度。</p>
   <p class="zh"><strong>崩溃报告（Firebase Crashlytics，Google）：</strong>崩溃堆栈与错误信息、最近的游戏日志、游戏版本、当前界面与关卡、设备型号、系统版本、内存与存储状态，以及 Firebase 安装 ID。Google 最多保留 90 天。</p>
-  <p class="zh"><strong>广告（Unity LevelPlay，广告网络为 Unity Ads、Google AdMob、Meta Audience Network）：</strong>主页底部有横幅广告，关卡之间有插屏广告，另有可自愿观看的激励视频。广告服务商会直接从设备收集：Android 的广告 ID（GAID）、iOS 的 IDFV，以及仅在你允许追踪时才有的 IDFA、设备型号、系统、语言、网络与 IP（及由此推断的大致位置），以及广告的展示、点击、完成情况，用于投放、频控、效果统计和反作弊。iOS 上游戏会在广告启动前弹一次苹果的“App 跟踪透明度”（ATT）授权：选“允许”，广告网络会拿到 IDFA，可能用于个性化广告和跨 App 的效果统计；选“要求 App 不跟踪”则拿不到。随时可以在 设置 → 隐私与安全性 → 跟踪 里更改。Android 上可能用于个性化广告，你可以在系统设置里重置或删除广告 ID、关闭广告个性化。对加州用户，游戏启用了 Meta 的“有限数据使用”（LDU）选项。</p>
+  <p class="zh"><strong>广告（Unity LevelPlay，广告网络为 Unity Ads、Google AdMob）：</strong>主页底部有横幅广告，关卡之间有插屏广告，另有可自愿观看的激励视频。广告服务商会直接从设备收集：Android 的广告 ID（GAID）、iOS 的 IDFV，以及仅在你允许追踪时才有的 IDFA、设备型号、系统、语言、网络与 IP（及由此推断的大致位置），以及广告的展示、点击、完成情况，用于投放、频控、效果统计和反作弊。iOS 上游戏会在广告启动前弹一次苹果的“App 跟踪透明度”（ATT）授权：选“允许”，广告网络会拿到 IDFA，可能用于个性化广告和跨 App 的效果统计；选“要求 App 不跟踪”则拿不到。随时可以在 设置 → 隐私与安全性 → 跟踪 里更改。Android 上可能用于个性化广告，你可以在系统设置里重置或删除广告 ID、关闭广告个性化。对加州用户，游戏启用了 Meta 的“有限数据使用”（LDU）选项。</p>
   <p class="zh"><strong>广告效果衡量（Meta SDK）：</strong>我们在 Facebook / Instagram 投放本游戏的广告，游戏内置 Meta SDK，向 Meta 发送：安装与启动、首次通过某关、完成新手教学（第 3 关）、内购（商品、价格、币种）、游戏内广告的预估收入，以及设备型号、系统、语言、IP，Android 上还有广告 ID（GAID）。iOS 上 Meta SDK 拿不到 IDFA（游戏关闭了它的广告追踪），Meta 只能做汇总层面的效果统计。游戏没有 Facebook 登录，也不读取你的 Facebook 账号。</p>
   <p class="zh"><strong>广告效果衡量（TikTok）：</strong>我们也在 TikTok 投放本游戏的广告，游戏内置 TikTok App Events SDK，发送的内容与 Meta 相同：安装、启动、次日回访、首次通关、完成教学、内购、广告收入，以及设备型号、系统、语言、IP，Android 上还有广告 ID。iOS 上只有在你允许追踪时才会共享 IDFA，否则 TikTok 只能通过苹果的 SKAdNetwork 做汇总统计。游戏为 TikTok 启用了“有限数据使用”选项。</p>
   <p class="zh"><strong>我们不做：</strong>我们自己的统计和崩溃报告不使用广告标识符，不出售个人信息换钱，不申请相机、麦克风、通讯录、相册、位置等任何设备权限。游戏提供可选的一次性内购“去广告”，付款完全由 App Store / Google Play 处理，我们拿不到你的支付信息、姓名或邮箱，只收到“购买了哪件商品”的确认，用于解锁和恢复购买，并在匿名统计中记一条购买事件。</p>
