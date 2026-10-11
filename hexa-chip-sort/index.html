@@ -43,7 +43,7 @@
   <h1 class="brand">Hexa Chip Sort</h1>
   <p class="tag">Hexagon Sort Puzzle · by RAINWE GAMES</p>
   <span class="badge">Privacy Policy / 隐私政策</span>
-  <p class="meta">Last updated / 最后更新: 2026-10-07</p>
+  <p class="meta">Last updated / 最后更新: 2026-10-11</p>
 
   <p class="lead">Hexa Chip Sort is a free, ad-supported hexagon chip sorting puzzle game. It has <strong>no accounts, no sign-in, and no chat</strong>, and it never asks for your name, email, contacts, photos, or location. To see how the game is played, to fix crashes, and to show ads, it sends data to a small number of service providers. This page lists all of it.</p>
 
@@ -57,12 +57,15 @@
   <div class="table-wrap"><table>
     <tr><th>Category</th><th>What is sent</th><th>Why</th></tr>
     <tr><td>Anonymous install ID</td><td>A random ID created by the Game when it is first run. It is not your advertising ID (no IDFA / GAID) and is not linked to your name or any account.</td><td>Count players and measure retention</td></tr>
-    <tr><td>Gameplay events</td><td>Level start / complete / fail / quit with the attempt number, moves, seconds spent, undos, boosters used (hint, add tube, skip), in-game coin changes, rewarded and full-screen ad impressions (placement only), purchases and restores (item only), theme purchases</td><td>Balance level difficulty</td></tr>
+    <tr><td>Gameplay events</td><td>Level start / complete / fail / quit with the attempt number, moves, seconds spent, undos, boosters used (hint, add tube, skip), in-game coin changes, rewarded and full-screen ad impressions (placement, and the estimated ad revenue reported by the ad network), purchases (item, price, and currency) and restores (item only), theme purchases, daily reward claims</td><td>Balance level difficulty</td></tr>
     <tr><td>Session info</td><td>Session start and end</td><td>Understand how long people play</td></tr>
     <tr><td>App &amp; platform</td><td>Game version, build tag, game settings version (see section 4), operating system (iOS / Android)</td><td>Compare versions and platforms</td></tr>
     <tr><td>Network data</td><td>Your IP address, which reaches PostHog with every internet request, and an approximate country/region PostHog may derive from it</td><td>Delivering the data; regional statistics</td></tr>
   </table></div>
   <p>PostHog's privacy policy: <a href="https://posthog.com/privacy" rel="noopener">posthog.com/privacy</a></p>
+
+  <h3>Game analytics (GameAnalytics)</h3>
+  <p>The Game also sends gameplay statistics to <strong>GameAnalytics</strong> (GameAnalytics Ltd.), a game analytics service, so we can see daily players, retention, level progress, and the in-game economy. It receives: session starts and lengths; level start, win, and fail; in-game coin gains and spending; which ads were shown or rewarded; and purchases (item, price, and currency). With these it receives device information: device model, operating system and version, game version, connection type, language, IP address and the country derived from it, and a device identifier &mdash; on Android the advertising ID (GAID); on iOS the identifier for vendor (IDFV), and the IDFA only if you allowed tracking in Apple's prompt. GameAnalytics' privacy policy: <a href="https://gameanalytics.com/privacy" rel="noopener">gameanalytics.com/privacy</a></p>
 
   <h2>3. Crash reports (Firebase Crashlytics)</h2>
   <p>When the Game crashes or hits a script error, it sends a crash report to <strong>Firebase Crashlytics</strong> (Google LLC) so we can fix the bug.</p>
@@ -75,13 +78,13 @@
   </table></div>
   <p>Google retains Crashlytics crash data for up to 90 days. Firebase privacy information: <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></p>
 
-  <p class="note"><strong>What we do not do:</strong> our own analytics and crash reports never use your advertising ID (IDFA / GAID), and the Game requests no device permissions such as camera, microphone, contacts, photos, or location. Advertising data, and Apple's tracking permission on iOS, are described in section 5.</p>
+  <p class="note"><strong>What we do not do:</strong> PostHog analytics and crash reports never use your advertising ID (IDFA / GAID) &mdash; GameAnalytics, described in section 2, is the exception, and the Game requests no device permissions such as camera, microphone, contacts, photos, or location. Advertising data, and Apple's tracking permission on iOS, are described in section 5.</p>
 
   <h2>4. Game settings download (Firebase Hosting)</h2>
   <p>When the Game starts, it downloads a small settings file (game balance values such as in-game prices) from <strong>Firebase Hosting</strong> (Google LLC), so we can adjust the Game without releasing an update. This is a plain download: the Game uploads no data with it. Like any web request, Google's servers see your device's IP address when they deliver the file. Firebase privacy information: <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></p>
 
   <h2>5. Advertising and purchases</h2>
-  <p>The Game shows full-screen ads between levels and optional rewarded video ads (for example an extra tube, a hint, or double coins). Ads are served through <strong>Unity LevelPlay</strong> (Unity Technologies) and the ad networks it works with, currently <strong>Unity Ads</strong>, <strong>Google AdMob</strong>, and <strong>Meta Audience Network</strong>. To choose, show, cap, and measure ads, and to prevent ad fraud, these companies collect data from your device directly:</p>
+  <p>The Game shows full-screen ads between levels and optional rewarded video ads (for example an extra tube, a hint, or double coins). Ads are served through <strong>Unity LevelPlay</strong> (Unity Technologies) and the ad networks it works with, currently <strong>ironSource Ads</strong>, <strong>Unity Ads</strong>, <strong>Google AdMob</strong>, and <strong>Meta Audience Network</strong>. To choose, show, cap, and measure ads, and to prevent ad fraud, these companies collect data from your device directly:</p>
   <div class="table-wrap"><table>
     <tr><th>Category</th><th>What is collected</th></tr>
     <tr><td>Device identifiers</td><td>On Android, the Google advertising ID (GAID). On iOS, the identifier for vendor (IDFV), and the advertising ID (IDFA) only if you allow tracking (see below).</td></tr>
@@ -96,8 +99,11 @@
   </ul>
   <p>The Game offers optional in-app purchases: "Remove Ads" and "No Ads Bundle" (one-time purchases), coin packs, the Starter Pack, and the Rescue Pack. Payment is handled entirely by the Apple App Store or Google Play under their own terms and privacy policies. <strong>We never receive your payment details, name, or email.</strong> The Game only receives a confirmation of which item was purchased, used to deliver it and to restore one-time purchases through "Restore Purchases", and it records an anonymous "purchase" event in the analytics described in section 2.</p>
 
+  <h3>Advertising measurement (Meta SDK)</h3>
+  <p>We advertise the Game on Facebook and Instagram. To measure and improve those ad campaigns, the Game includes the <strong>Meta (Facebook) SDK</strong>, which sends Meta: app installs and launches; the first time you clear a level; completing the tutorial (level 2); purchases (item, price, and currency); and the estimated revenue of ads shown in the Game. It also sends device information such as the device model, operating system, language, IP address, and on Android the advertising ID (GAID). On iOS the Meta SDK never receives the IDFA (the Game turns its advertiser tracking off), so Meta measures iOS campaigns only in aggregate. The Game has no Facebook login and never reads your Facebook account. Meta's privacy policy: <a href="https://www.facebook.com/privacy/policy/" rel="noopener">facebook.com/privacy/policy</a>.</p>
+
   <h2>6. Who we share data with</h2>
-  <p>PostHog and Google Firebase process data on our behalf to provide analytics and crash reporting, and Firebase Hosting delivers the settings file described in section 4. Unity LevelPlay and its ad networks receive the advertising data described in section 5. We do not sell your personal information for money. Under some US state laws, letting ad networks use device identifiers for interest-based ads may count as "sharing" personal information; you can limit this with the device settings in section 5 or by contacting us. We may disclose information if required by law.</p>
+  <p>PostHog, GameAnalytics, and Google Firebase process data on our behalf to provide analytics and crash reporting, and Firebase Hosting delivers the settings file described in section 4. Unity LevelPlay and its ad networks receive the advertising data described in section 5, and Meta receives the ad-measurement events described there. We do not sell your personal information for money. Under some US state laws, letting ad networks use device identifiers for interest-based ads may count as "sharing" personal information; you can limit this with the device settings in section 5 or by contacting us. We may disclose information if required by law.</p>
 
   <h2>7. Data retention and your choices</h2>
   <ul>
@@ -120,11 +126,13 @@
 
   <h2 class="zh">中文摘要</h2>
   <p class="zh">《Hexa Chip Sort》由 <strong>RAINWE GAMES</strong> 开发，没有账号、登录和聊天功能，不索取姓名、邮箱、通讯录、照片或位置。游戏进度（关卡、金币、免费道具数量、已拥有的配色主题）、设置（声音、振动）和购买记录只保存在你的设备上，卸载即删除。</p>
-  <p class="zh"><strong>匿名游玩统计（PostHog，美国）：</strong>首次启动时随机生成的安装 ID（不是广告标识符）、会话开始/结束、关卡开始/通关/失败/退出及第几次尝试、步数、用时、撤销次数、使用的道具（提示、加管、跳关）、游戏内金币变化、激励视频与插屏广告的展示（只记录广告位）、内购与恢复购买（只记录商品）、主题购买，游戏版本、构建标记、远程配置版本与系统平台，以及随网络请求到达的 IP 地址（可能被用于推断大致地区）。用于调整关卡难度。</p>
+  <p class="zh"><strong>匿名游玩统计（PostHog，美国）：</strong>首次启动时随机生成的安装 ID（不是广告标识符）、会话开始/结束、关卡开始/通关/失败/退出及第几次尝试、步数、用时、撤销次数、使用的道具（提示、加管、跳关）、游戏内金币变化、激励视频与插屏广告的展示（广告位，以及广告网络回报的预估广告收入）、内购（商品、价格、币种）与恢复购买（只记录商品）、主题购买、每日奖励领取，游戏版本、构建标记、远程配置版本与系统平台，以及随网络请求到达的 IP 地址（可能被用于推断大致地区）。用于调整关卡难度。</p>
+  <p class="zh"><strong>游戏统计（GameAnalytics）：</strong>会话开始与时长、关卡开始/通关/失败、游戏内金币的获得与消耗、广告的展示与奖励、内购（商品、价格、币种），以及设备型号、系统及版本、游戏版本、网络类型、语言、IP 及由此推断的国家，和设备标识：Android 为广告 ID（GAID），iOS 为 IDFV，仅在你允许追踪时才有 IDFA。用于查看日活、留存、关卡进度和游戏内经济。</p>
   <p class="zh"><strong>崩溃报告（Firebase Crashlytics，Google）：</strong>崩溃堆栈与错误信息、最近的游戏日志（例如“game startup”）、游戏版本与构建、当前界面与关卡、设备型号、系统版本、内存与存储状态，以及 Firebase 安装 ID。Google 最多保留 90 天。</p>
   <p class="zh"><strong>游戏设置文件（Firebase Hosting，Google）：</strong>游戏启动时会从 Firebase Hosting 下载一个小的设置文件（如游戏内价格等数值），只下载、不上传任何数据；和所有网络请求一样，Google 的服务器会看到你的 IP 地址。</p>
-  <p class="zh"><strong>广告（Unity LevelPlay，广告网络为 Unity Ads、Google AdMob、Meta Audience Network）：</strong>关卡之间有插屏广告，另有可自愿观看的激励视频（如加一根管、提示、金币翻倍）。广告服务商会直接从设备收集：Android 的广告 ID（GAID）、iOS 的 IDFV，以及仅在你允许追踪时才有的 IDFA、设备型号、系统、语言、网络与 IP（及由此推断的大致位置），以及广告的展示、点击、完成情况，用于投放、频控、效果统计和反作弊。iOS 上游戏会在广告启动前弹一次苹果的“App 跟踪透明度”（ATT）授权：选“允许”，广告网络会拿到 IDFA，可能用于个性化广告和跨 App 的效果统计；选“要求 App 不跟踪”则拿不到。随时可以在 设置 → 隐私与安全性 → 跟踪 里更改。Android 上可能用于个性化广告，你可以在系统设置里重置或删除广告 ID、关闭广告个性化。对加州用户，游戏启用了 Meta 的“有限数据使用”（LDU）选项。</p>
-  <p class="zh"><strong>我们不做：</strong>我们自己的统计和崩溃报告不使用广告标识符，不出售个人信息换钱，不申请相机、麦克风、通讯录、相册、位置等任何设备权限。游戏提供可选内购：一次性的“去广告”（Remove Ads）和“无广告礼包”（No Ads Bundle）、金币包、新手礼包（Starter Pack）、救援礼包（Rescue Pack）。付款完全由 App Store / Google Play 处理，我们拿不到你的支付信息、姓名或邮箱，只收到“购买了哪件商品”的确认，用于发放商品和恢复一次性购买，并在匿名统计中记一条购买事件。</p>
+  <p class="zh"><strong>广告（Unity LevelPlay，广告网络为 ironSource Ads、Unity Ads、Google AdMob、Meta Audience Network）：</strong>关卡之间有插屏广告，另有可自愿观看的激励视频（如加一根管、提示、金币翻倍）。广告服务商会直接从设备收集：Android 的广告 ID（GAID）、iOS 的 IDFV，以及仅在你允许追踪时才有的 IDFA、设备型号、系统、语言、网络与 IP（及由此推断的大致位置），以及广告的展示、点击、完成情况，用于投放、频控、效果统计和反作弊。iOS 上游戏会在广告启动前弹一次苹果的“App 跟踪透明度”（ATT）授权：选“允许”，广告网络会拿到 IDFA，可能用于个性化广告和跨 App 的效果统计；选“要求 App 不跟踪”则拿不到。随时可以在 设置 → 隐私与安全性 → 跟踪 里更改。Android 上可能用于个性化广告，你可以在系统设置里重置或删除广告 ID、关闭广告个性化。对加州用户，游戏启用了 Meta 的“有限数据使用”（LDU）选项。</p>
+  <p class="zh"><strong>广告效果衡量（Meta SDK）：</strong>我们在 Facebook / Instagram 投放本游戏的广告，游戏内置 Meta SDK，向 Meta 发送：安装与启动、首次通过某关、完成新手教学（第 2 关）、内购（商品、价格、币种）、游戏内广告的预估收入，以及设备型号、系统、语言、IP，Android 上还有广告 ID（GAID）。iOS 上 Meta SDK 拿不到 IDFA（游戏关闭了它的广告追踪），Meta 只能做汇总层面的效果统计。游戏没有 Facebook 登录，也不读取你的 Facebook 账号。</p>
+  <p class="zh"><strong>我们不做：</strong>PostHog 匿名统计和崩溃报告不使用广告标识符（GameAnalytics 例外，见上），不出售个人信息换钱，不申请相机、麦克风、通讯录、相册、位置等任何设备权限。游戏提供可选内购：一次性的“去广告”（Remove Ads）和“无广告礼包”（No Ads Bundle）、金币包、新手礼包（Starter Pack）、救援礼包（Rescue Pack）。付款完全由 App Store / Google Play 处理，我们拿不到你的支付信息、姓名或邮箱，只收到“购买了哪件商品”的确认，用于发放商品和恢复一次性购买，并在匿名统计中记一条购买事件。</p>
   <p class="zh">本游戏不面向 13 岁以下儿童。如需查询或删除与你的安装相关的数据，请通过第 10 节的方式联系我们。</p>
 
   <footer>© 2026 RAINWE GAMES · Hexa Chip Sort</footer>
